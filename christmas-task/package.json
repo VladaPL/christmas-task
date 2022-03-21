@@ -1,0 +1,32 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "---",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "7.12.8",
+    "@babel/preset-env": "7.12.7",
+    "babel-loader": "8.2.1",
+    "copy-webpack-plugin": "6.3.1",
+    "css-loader": "5.0.1",
+    "eslint": "7.3.1",
+    "eslint-config-airbnb-base": "14.2.0",
+    "eslint-plugin-import": "2.22.1",
+    "html-webpack-plugin": "4.5.0",
+    "style-loader": "2.0.0",
+    "url-loader": "4.1.1",
+    "webpack": "4.43.0",
+    "webpack-cli": "3.3.12",
+    "webpack-dev-server": "3.11.0"
+  },
+  "scripts": {
+    "eslint": "eslint src/**/*.js",
+    "test": "npm run eslint",
+    "build": "webpack",
+    "start": "webpack-dev-server --open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

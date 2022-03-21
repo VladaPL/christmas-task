@@ -1,0 +1,564 @@
+html {
+  box-sizing: border-box; /* Свойства width и height включают в себя значения padding и border, но не margin*/
+  scroll-behavior: smooth; /* плавная прокрутка */
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: white;
+  background: #192f2d;
+}
+
+.main {
+  min-height: 950px;
+  background-image: url(./assets/bg.jpg);
+  background-size: cover;
+  text-align: center;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1600px;
+}
+
+.header-wrapper,
+.header-nav,
+.header-search-counter,
+.footer__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+
+/* HEADER START */
+
+.nav-item {
+  margin-right: 30px;
+}
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
+.logo {
+  width: 48px;
+  height: 60px;
+  background-image: url(./assets/svg/tree.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.title-container,
+.btn-start {
+  width: 594px;
+  height: 250px;
+  margin: 0 auto;
+  color: white;
+  background: radial-gradient(
+    118.88% 606.86% at 0% 0%,
+    rgba(36, 197, 219, 0.15) 0%,
+    rgba(36, 197, 219, 0) 100%
+  );
+  border-radius: 30px;
+  border: solid 1px #278d9f;
+  backdrop-filter: blur(31px);
+}
+
+.btn-start {
+  width: 320px;
+  height: 54px;
+  margin-top: 40px;
+  font-size: 25px;
+  letter-spacing: 2px;
+}
+
+.btn-start:hover {
+  background: radial-gradient(
+    118.88% 606.86% at 0% 0%,
+    rgba(6, 39, 44, 0.15) 0%,
+    rgba(12, 67, 75, 0) 100%
+  );
+}
+
+.search {
+  width: 380px;
+  height: 40px;
+  padding: 3px 25px;
+  margin: 10px 0;
+  margin-right: 40px;
+  border-radius: 20px;
+  border: 1px solid #278d9f;
+  color: #fff;
+  font-size: 18px;
+  background-color: rgba(31, 112, 127, 0.3);
+  background-image: url(./assets/svg/search.svg);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 320px center;
+  backdrop-filter: blur(5px);
+}
+
+.counter {
+  width: 48px;
+  height: 60px;
+  background-image: url(./assets/svg/ball-2.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* MAIN START */
+
+.main-heading,
+.name-game {
+  margin-top: 60px;
+  font-size: 45px;
+  font-weight: 100;
+  letter-spacing: 2px;
+}
+
+.start-page-container {
+  position: relative;
+  padding-top: 200px;
+}
+
+.bg-ball-left {
+  position: absolute;
+  width: 418px;
+  height: 468px;
+  left: 260px;
+  top: 210px;
+  background: url(./assets/ball/1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.bg-ball-left::before {
+  top: -210px;
+  left: calc(50% - 20px);
+  width: 4px;
+  height: 220px;
+}
+
+.bg-ball-left::before {
+  content: "";
+  position: absolute;
+  background-color: #aaa;
+}
+
+.bg-ball-right {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  left: 1040px;
+  top: 210px;
+  background: url(./assets/ball/2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.bg-ball-right::before {
+  top: -210px;
+  left: calc(50% - 25px);
+  width: 4px;
+  height: 215px;
+}
+
+.bg-ball-right::before {
+  content: "";
+  position: absolute;
+  background-color: #aaa;
+}
+
+/* TOYS-PAGE START*/
+
+.toys-page {
+  margin: 0 auto;
+  width: 90%;
+  height: 100%;
+}
+
+.filters-container {
+  width: 800px;
+  height: 400px;
+}
+
+.toys-container,
+.chr-tree-page {
+  width: 800px;
+  height: 450px;
+}
+
+.filters-value-container,
+.filters-range-container,
+.filters-alphabet-container,
+.sort,
+.card-container,
+.amount-container,
+.year-container {
+  margin: 0 auto;
+  padding: 10px;
+  border: solid 1px #278d9f;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  background-color: rgba(31, 112, 127, 0.3);
+}
+
+.filters-value-container,
+.filters-range-container,
+.filters-alphabet-container {
+  margin: 10px;
+  width: 31%;
+}
+
+.filters-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.shape,
+.size,
+.favorite-toy {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: 10px 10px;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+}
+
+.сolor {
+  width: 30px;
+  height: 30px;
+  margin: 10px 7px;
+  border: 0;
+  outline: 0;
+  border-radius: 8px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.color-yellow {
+  background-color: rgb(187, 187, 53);
+}
+.color-red {
+  background-color: rgb(197, 57, 57);
+}
+.color-blue {
+  background-color: rgb(52, 52, 187);
+}
+.color-green {
+  background-color: rgb(66, 129, 66);
+}
+
+.color:hover {
+  /* не работает ПОЧЕМУ??? */
+  filter: drop-shadow(0 0 10px rgba(228, 171, 13, 1));
+}
+
+.color-active {
+  filter: drop-shadow(0 0 10px rgba(228, 171, 13, 1));
+}
+
+.shape-ball {
+  background-image: url(./assets/svg/ball.svg);
+}
+
+.shape-bell {
+  background-image: url(./assets/svg/bell.svg);
+  margin-left: 5px;
+}
+.shape-cone {
+  background-image: url(./assets/svg/cone.svg);
+  margin-left: 5px;
+}
+.shape-snowflake {
+  background-image: url(./assets/svg/snowflake.svg);
+  margin-left: 5px;
+}
+.shape-toy {
+  background-image: url(./assets/svg/toy.svg);
+  margin-left: 5px;
+}
+
+.shape:hover {
+  filter: drop-shadow(0 0 7px rgba(228, 171, 13, 0.808));
+}
+
+.shape-active {
+  filter: invert(9%) sepia(63%) saturate(461%) hue-rotate(322deg)
+    brightness(83%) contrast(88%);
+}
+
+.size-big,
+.size-middle,
+.size-small {
+  background-image: url(./assets/svg/ball.svg);
+  margin-left: 5px;
+}
+
+.size-big {
+  width: 50px;
+  height: 50px;
+}
+.size-middle {
+  width: 40px;
+  height: 40px;
+}
+.size-small {
+  width: 35px;
+  height: 35px;
+}
+
+.size:hover {
+  filter: drop-shadow(0 0 7px rgba(228, 171, 13, 0.808));
+}
+.color:hover {
+  box-shadow: 0 0 10px rgba(221, 171, 35, 0.664);
+}
+
+.active {
+  filter: drop-shadow(0 0 7px rgba(228, 171, 13, 0.808));
+}
+
+.favorite-toy {
+  /* Почему работает только ширина? */
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: solid 1px #278d9f;
+}
+.favorite-toy:checked {
+  background-color: #278d9f;
+}
+
+/* * Range sliders */
+
+.amount-title {
+  padding-top: 20px;
+  margin-bottom: 30px;
+}
+
+.amount-container .field {
+  height: 45px;
+  width: 30%;
+  display: flex;
+  align-items: center;
+}
+
+/* * YEAR Slider start */
+
+.year-title {
+  margin-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 40px;
+}
+
+/* * YEAR Slider end */
+
+/* * TOYS block*/
+.toys-container,
+.container-sort-toys {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-container {
+  margin: 10px;
+  width: 18%;
+}
+
+.card-container:hover {
+  border: solid 1px #b39a0dde;
+}
+
+.chosen-toy-highlight {
+  filter: drop-shadow(0 0 7px rgba(228, 171, 13, 0.808));
+}
+
+.card-img {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.card-img:hover {
+  filter: drop-shadow(0 0 7px rgba(228, 171, 13, 0.808));
+}
+
+.active-card {
+  border: solid 1px #b39a0dde;
+}
+
+/* CHRISTMAS-TREE-PAGE START */
+.chr-tree-page {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.left-block,
+.center-block,
+.right-block,
+.control,
+.container-chosen-toys {
+  margin: 0 auto;
+  padding: 10px;
+  border: solid 1px #278d9f;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  background-color: rgba(31, 112, 127, 0.3);
+  /*background-color: rgba(202, 180, 54, 0.3);*/
+  width: 33%;
+}
+
+.container-chosen-toys {
+  width: 90%;
+  height: 90%;
+}
+
+.control {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.trees,
+.bg {
+  width: 115px;
+  height: 115px;
+  border: solid 1px #278d9f;
+  border-radius: 10px;
+  margin: 10px 10px;
+  outline: 0;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+}
+
+.trees:hover {
+  filter: drop-shadow(0 0 7px rgba(228, 171, 13, 0.808));
+}
+
+.first-tree {
+  background-image: url(./assets/tree/1.png);
+}
+.second-tree {
+  background-image: url(./assets/tree/2.png);
+}
+.third-tree {
+  background-image: url(./assets/tree/3.png);
+}
+.fourth-tree {
+  background-image: url(./assets/tree/4.png);
+}
+.fifth-tree {
+  background-image: url(./assets/tree/5.png);
+}
+.sixth-tree {
+  background-image: url(./assets/tree/6.png);
+}
+
+.bg {
+  width: 65px;
+  height: 65px;
+  background-size: cover;
+}
+.bg:hover {
+  filter: drop-shadow(0 0 7px rgba(228, 171, 13, 0.808));
+}
+
+.first-bg {
+  background-image: url(./assets/bg/1.jpg);
+}
+.second-bg {
+  background-image: url(./assets/bg/2.jpg);
+}
+.third-bg {
+  background-image: url(./assets/bg/3.jpg);
+}
+.fourth-bg {
+  background-image: url(./assets/bg/4.jpg);
+}
+.fifth-bg {
+  background-image: url(./assets/bg/5.jpg);
+}
+.sixth-bg {
+  background-image: url(./assets/bg/6.jpg);
+}
+
+.seventh-bg {
+  background-image: url(./assets/bg/7.jpg);
+}
+
+.eighth-bg {
+  background-image: url(./assets/bg/8.jpg);
+}
+.ninth-bg {
+  background-image: url(./assets/bg/9.jpg);
+}
+.tenth-bg {
+  background-image: url(./assets/bg/10.jpg);
+}
+
+.img-chosen-item {
+  width: 60px;
+}
+
+.bg-decor {
+  margin: 0 auto;
+  width: 90%;
+  height: 90%;
+  background-image: url(./assets/bg/3.jpg);
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.tree-decor {
+  position: relative;
+  margin: 0 auto;
+  width: 60%;
+  height: 60%;
+  background-image: url(./assets/tree/1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 10;
+  top: -350px;
+  left: 30px;
+}
+
+/* FOOTER START */
+
+.name__link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer__item {
+  text-align: center;
+}
